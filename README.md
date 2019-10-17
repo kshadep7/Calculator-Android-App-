@@ -1,2 +1,2 @@
-# Calculator-Android-App-
-A simple Calculator app using kotlin
+# Calculator-Android-App
+###  A simple Calculator app using kotlin
