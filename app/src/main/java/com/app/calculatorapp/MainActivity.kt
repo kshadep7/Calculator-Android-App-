@@ -3,10 +3,9 @@ package com.app.calculatorapp
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import kotlinx.android.synthetic.main.activity_main.*
 
 private const val STATE_PENDING_OPERATION = "PendingOperation"
 private const val STATE_OPERAND_1 = "Operand1"
@@ -14,10 +13,6 @@ private const val STATE_OPERAND1_STORED = "Operand1_Stored"
 
 class MainActivity : AppCompatActivity() {
 
-    //    variables for result and new number entered
-    private lateinit var result: EditText
-    private lateinit var newNumber: EditText
-    private val displayOperation by lazy(LazyThreadSafetyMode.NONE) { findViewById<TextView>(R.id.operator) }
 
     //    Variables for operands
     private var operand1: Double? = null
@@ -27,29 +22,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        result = findViewById(R.id.result)
-        newNumber = findViewById(R.id.newNumber)
-
-//        calculator input buttons
-        val button0: Button = findViewById(R.id.button0)
-        val button1: Button = findViewById(R.id.button1)
-        val button2: Button = findViewById(R.id.button2)
-        val button3: Button = findViewById(R.id.button3)
-        val button4: Button = findViewById(R.id.button4)
-        val button5: Button = findViewById(R.id.button5)
-        val button6: Button = findViewById(R.id.button6)
-        val button7: Button = findViewById(R.id.button7)
-        val button8: Button = findViewById(R.id.button8)
-        val button9: Button = findViewById(R.id.button9)
-        val buttonDot: Button = findViewById(R.id.buttonDot)
-
-//        operator buttons
-        val buttonAdd: Button = findViewById(R.id.buttonAdd)
-        val buttonSub: Button = findViewById(R.id.buttonSub)
-        val buttonMul: Button = findViewById(R.id.buttonMultiply)
-        val buttonDiv: Button = findViewById(R.id.buttonDivide)
-        val buttonEqual: Button = findViewById(R.id.buttonEqual)
 
         val listner = View.OnClickListener { v ->
             val b = v as Button
@@ -78,14 +50,30 @@ class MainActivity : AppCompatActivity() {
                 newNumber.setText("")
             }
             pendingOperation = op
-            displayOperation.text = pendingOperation
+            operator.text = pendingOperation
+        }
+
+        buttonNeg.setOnClickListener { v: View? ->
+            val value = newNumber.text.toString()
+            if(value.isEmpty()){
+                newNumber.setText("-")
+            }else{
+                try {
+                    var doubleValue = value.toDouble()
+                    doubleValue *= -1
+                    newNumber.setText(doubleValue.toString())
+                } catch (e: NumberFormatException) {
+//                    if newnumber was "-" or "."
+                    newNumber.setText("")
+                }
+            }
         }
 
         buttonEqual.setOnClickListener(opListner)
         buttonAdd.setOnClickListener(opListner)
         buttonSub.setOnClickListener(opListner)
-        buttonMul.setOnClickListener(opListner)
-        buttonDiv.setOnClickListener(opListner)
+        buttonMultiply.setOnClickListener(opListner)
+        buttonDivide.setOnClickListener(opListner)
 
 
     }
@@ -122,7 +110,7 @@ class MainActivity : AppCompatActivity() {
         } else {
             null
         }
-        displayOperation.text = savedInstanceState.get(STATE_PENDING_OPERATION) as CharSequence
+        operator.text = savedInstanceState.get(STATE_PENDING_OPERATION) as CharSequence
 //        Log.d("onSaveInstanceState", "${displayOperation.text}, $operand1, ${savedInstanceState.getBoolean(
 //            STATE_OPERAND1_STORED)}")
 
@@ -130,7 +118,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
-        outState.putString(STATE_PENDING_OPERATION, displayOperation?.text.toString())
+        outState.putString(STATE_PENDING_OPERATION, operator.text.toString())
         if (operand1 != null) {
             outState.putDouble(STATE_OPERAND_1, operand1!!)
             outState.putBoolean(STATE_OPERAND1_STORED, true)
