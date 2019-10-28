@@ -92,7 +92,7 @@ class MainActivity : AppCompatActivity() {
                     Toast.makeText(this, "${Double.NaN}", Toast.LENGTH_SHORT).show()
                     operand1 = 0.0
                 } else {
-                    operand1!! / value
+                    operand1 = operand1!! / value
                 }
                 "+" -> operand1 = operand1!! + value
                 "-" -> operand1 = operand1!! - value

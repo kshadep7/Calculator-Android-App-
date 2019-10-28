@@ -11,7 +11,7 @@
         android:id="@+id/newNumber"
         android:layout_width="232dp"
         android:layout_height="43dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="32dp"
         android:backgroundTint="#ff6768"
         android:ems="10"
         android:focusable="false"
@@ -29,7 +29,7 @@
         android:layout_height="43dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
         android:backgroundTint="#ff6768"
         android:ems="10"
         android:focusable="false"
@@ -38,8 +38,8 @@
         android:textColor="#ff6768"
         android:textSize="18sp"
         android:textStyle="normal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.102"
+        app:layout_constraintBottom_toTopOf="@+id/guideline4"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -60,9 +60,10 @@
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
         android:layout_marginStart="16dp"
+        android:background="@drawable/round_button"
         android:backgroundTint="#6b778d"
         android:minWidth="48dp"
         android:text="3"
@@ -73,9 +74,10 @@
 
     <Button
         android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
         android:layout_marginTop="16dp"
+        android:background="@drawable/round_button"
         android:backgroundTint="#6b778d"
         android:minWidth="48dp"
         android:text="4"
@@ -86,9 +88,10 @@
 
     <Button
         android:id="@+id/button5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
         android:layout_marginStart="16dp"
+        android:background="@drawable/round_button"
         android:backgroundTint="#6b778d"
         android:minWidth="48dp"
         android:text="5"
@@ -99,21 +102,24 @@
 
     <Button
         android:id="@+id/button7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/round_button"
         android:backgroundTint="#6b778d"
         android:minWidth="48dp"
         android:text="7"
         android:textSize="24sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/result"
-        app:layout_constraintStart_toEndOf="@+id/result" />
+        app:layout_constraintStart_toEndOf="@+id/result"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
         android:layout_marginStart="16dp"
+        android:background="@drawable/round_button"
         android:backgroundTint="#6b778d"
         android:minWidth="48dp"
         android:text="8"
@@ -123,9 +129,10 @@
 
     <Button
         android:id="@+id/button9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
         android:layout_marginStart="16dp"
+        android:background="@drawable/round_button"
         android:backgroundTint="#6b778d"
         android:minWidth="48dp"
         android:text="9"
@@ -135,9 +142,10 @@
 
     <Button
         android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
         android:layout_marginTop="16dp"
+        android:background="@drawable/round_button"
         android:backgroundTint="#6b778d"
         android:minWidth="48dp"
         android:text="1"
@@ -147,10 +155,11 @@
 
     <Button
         android:id="@+id/buttonSub"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
         android:layout_marginStart="16dp"
-        android:backgroundTint="#6b778d"
+        android:background="@drawable/round_button"
+        android:backgroundTint="#ff6768"
         android:minWidth="48dp"
         android:text="-"
         android:textSize="24sp"
@@ -159,22 +168,24 @@
 
     <Button
         android:id="@+id/button0"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/round_button"
         android:backgroundTint="#6b778d"
         android:minWidth="48dp"
         android:text="0"
         android:textSize="24sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/buttonMultiply"
-        app:layout_constraintStart_toEndOf="@+id/buttonMultiply" />
+        app:layout_constraintStart_toStartOf="@+id/button1"
+        app:layout_constraintTop_toBottomOf="@+id/button1" />
 
     <Button
         android:id="@+id/buttonDot"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
         android:layout_marginStart="16dp"
-        android:backgroundTint="#6b778d"
+        android:background="@drawable/round_button"
+        android:backgroundTint="#ff6768"
         android:minWidth="48dp"
         android:text="."
         android:textSize="24sp"
@@ -183,22 +194,24 @@
 
     <Button
         android:id="@+id/buttonDivide"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
         android:layout_marginStart="16dp"
+        android:background="@drawable/round_button"
+        android:backgroundTint="#ff6768"
         android:minWidth="48dp"
         android:text="/"
         android:textSize="24sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/button0"
-        app:layout_constraintStart_toEndOf="@+id/button0"
-        android:backgroundTint="#6b778d" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/buttonMultiply"
+        app:layout_constraintStart_toEndOf="@+id/buttonMultiply" />
 
     <Button
         android:id="@+id/buttonEqual"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
         android:layout_marginStart="16dp"
-        android:backgroundTint="#6b778d"
+        android:background="@drawable/round_button"
+        android:backgroundTint="#ff6768"
         android:minWidth="48dp"
         android:text="="
         android:textSize="24sp"
@@ -207,9 +220,10 @@
 
     <Button
         android:id="@+id/button6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
         android:layout_marginStart="16dp"
+        android:background="@drawable/round_button"
         android:backgroundTint="#6b778d"
         android:minWidth="48dp"
         android:text="6"
@@ -219,9 +233,10 @@
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
         android:layout_marginStart="16dp"
+        android:background="@drawable/round_button"
         android:backgroundTint="#6b778d"
         android:minWidth="48dp"
         android:text="2"
@@ -231,10 +246,11 @@
 
     <Button
         android:id="@+id/buttonAdd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
         android:layout_marginStart="16dp"
-        android:backgroundTint="#6b778d"
+        android:background="@drawable/round_button"
+        android:backgroundTint="#ff6768"
         android:minWidth="48dp"
         android:text="+"
         android:textSize="24sp"
@@ -243,26 +259,42 @@
 
     <Button
         android:id="@+id/buttonMultiply"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:backgroundTint="#6b778d"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/round_button"
+        android:backgroundTint="#ff6768"
         android:minWidth="48dp"
         android:text="*"
         android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="@+id/button1"
-        app:layout_constraintTop_toBottomOf="@+id/button1" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/button0"
+        app:layout_constraintStart_toEndOf="@+id/button0" />
 
     <Button
         android:id="@+id/buttonNeg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
         android:layout_marginStart="16dp"
-        android:backgroundTint="#6b778d"
+        android:background="@drawable/round_button"
+        android:backgroundTint="#ff6768"
         android:minWidth="48dp"
-        android:text="neg(-)"
+        android:text="+/-"
         android:textSize="24sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/buttonDot"
         app:layout_constraintStart_toEndOf="@+id/buttonDot" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
