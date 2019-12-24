@@ -16,48 +16,49 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val viewModel = ViewModelProviders.of(this).get(CalculatorViewModel::class.java)
+//        val viewModel = ViewModelProviders.of(this).get(CalculatorViewModel::class.java)
+        val viewModel = ViewModelProviders.of(this).get(BigDecimalViewModel::class.java)
 
-        viewModel.result.observe(this, Observer<String> { resultStr ->
+        viewModel.stringResult.observe(this, Observer<String> { resultStr ->
             result.setText(resultStr)
         })
 
-        viewModel.newNumber.observe(
+        viewModel.stringNewNumber.observe(
             this,
             Observer<String> { newNumStr -> newNumber.setText(newNumStr) })
 
-        viewModel.operator.observe(this, Observer<String> { operatorStr ->
+        viewModel.stringOperator.observe(this, Observer<String> { operatorStr ->
             operator.text = operatorStr
         })
 
-        val listner = View.OnClickListener { v ->
+        val listener = View.OnClickListener { v ->
             viewModel.digitPressed((v as Button).text.toString())
         }
 
-        button0.setOnClickListener(listner)
-        button1.setOnClickListener(listner)
-        button2.setOnClickListener(listner)
-        button3.setOnClickListener(listner)
-        button4.setOnClickListener(listner)
-        button5.setOnClickListener(listner)
-        button6.setOnClickListener(listner)
-        button7.setOnClickListener(listner)
-        button8.setOnClickListener(listner)
-        button9.setOnClickListener(listner)
-        buttonDot.setOnClickListener(listner)
+        button0.setOnClickListener(listener)
+        button1.setOnClickListener(listener)
+        button2.setOnClickListener(listener)
+        button3.setOnClickListener(listener)
+        button4.setOnClickListener(listener)
+        button5.setOnClickListener(listener)
+        button6.setOnClickListener(listener)
+        button7.setOnClickListener(listener)
+        button8.setOnClickListener(listener)
+        button9.setOnClickListener(listener)
+        buttonDot.setOnClickListener(listener)
 
-        val opListner = View.OnClickListener { v: View? ->
+        val opListener = View.OnClickListener { v: View? ->
             viewModel.operandPressed((v as Button).text.toString())
         }
 
-        buttonNeg.setOnClickListener { v: View? ->
+        buttonNeg.setOnClickListener {
             viewModel.negPressed()
         }
 
-        buttonEqual.setOnClickListener(opListner)
-        buttonAdd.setOnClickListener(opListner)
-        buttonSub.setOnClickListener(opListner)
-        buttonMultiply.setOnClickListener(opListner)
-        buttonDivide.setOnClickListener(opListner)
+        buttonEqual.setOnClickListener(opListener)
+        buttonAdd.setOnClickListener(opListener)
+        buttonSub.setOnClickListener(opListener)
+        buttonMultiply.setOnClickListener(opListener)
+        buttonDivide.setOnClickListener(opListener)
     }
 }
