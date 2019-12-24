@@ -10,19 +10,23 @@
 
     <Button
         android:id="@+id/buttonNeg"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginBottom="32dp"
         android:background="@drawable/round_button"
         android:backgroundTint="#ff6768"
         android:minWidth="48dp"
         android:text="+/-"
         android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonMultiply" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonMultiply"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/newNumber"
@@ -78,8 +82,8 @@
 
     <Button
         android:id="@+id/button0"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/round_button"
         android:backgroundTint="#6b778d"
@@ -92,8 +96,8 @@
 
     <Button
         android:id="@+id/button1"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/round_button"
         android:backgroundTint="#6b778d"
@@ -106,8 +110,8 @@
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/round_button"
         android:backgroundTint="#6b778d"
@@ -120,8 +124,8 @@
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/round_button"
         android:backgroundTint="#6b778d"
@@ -134,8 +138,8 @@
 
     <Button
         android:id="@+id/button4"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/round_button"
         android:backgroundTint="#6b778d"
@@ -148,8 +152,8 @@
 
     <Button
         android:id="@+id/button5"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/round_button"
         android:backgroundTint="#6b778d"
@@ -162,8 +166,8 @@
 
     <Button
         android:id="@+id/button6"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/round_button"
         android:backgroundTint="#6b778d"
@@ -176,8 +180,8 @@
 
     <Button
         android:id="@+id/button7"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/round_button"
         android:backgroundTint="#6b778d"
@@ -190,8 +194,8 @@
 
     <Button
         android:id="@+id/button8"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/round_button"
@@ -205,8 +209,8 @@
 
     <Button
         android:id="@+id/button9"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/round_button"
@@ -220,8 +224,8 @@
 
     <Button
         android:id="@+id/buttonSub"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_marginStart="16dp"
         android:background="@drawable/round_button"
         android:backgroundTint="#ff6768"
@@ -234,8 +238,8 @@
 
     <Button
         android:id="@+id/buttonAdd"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_marginStart="16dp"
         android:background="@drawable/round_button"
         android:backgroundTint="#ff6768"
@@ -248,8 +252,8 @@
 
     <Button
         android:id="@+id/buttonDivide"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/round_button"
         android:backgroundTint="#ff6768"
@@ -262,8 +266,8 @@
 
     <Button
         android:id="@+id/buttonMultiply"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/round_button"
         android:backgroundTint="#ff6768"
@@ -276,8 +280,8 @@
 
     <Button
         android:id="@+id/buttonEqual"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_marginStart="16dp"
         android:background="@drawable/round_button"
         android:backgroundTint="#ff6768"
@@ -290,8 +294,8 @@
 
     <Button
         android:id="@+id/buttonDot"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_marginStart="16dp"
         android:background="@drawable/round_button"
         android:backgroundTint="#ff6768"
