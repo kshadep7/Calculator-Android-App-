@@ -7,7 +7,7 @@
 * This helped me in designing this app in such a way that I am able to restore the all the values even if the activity is destroyed. (Bye bye SharedPrefereneces!!)
 
 #### ScreenShot 1
-<img src = "https://github.com/kshadep7/Calculator-Android-App-/blob/master/app/src/main/res/calcy1.png" width="400" height="700" alt = "ScreenShot_1">
+<img src = "https://github.com/kshadep7/Calculator-Android-App-/blob/master/app/src/main/res/calcy1.png" width="300" height="500" alt = "ScreenShot_1">
 
 #### ScreenShot 2
-<img src = "https://github.com/kshadep7/Calculator-Android-App-/blob/master/app/src/main/res/calcy2.png" width="700" height="400" alt = "ScreenShot_2">
+<img src = "https://github.com/kshadep7/Calculator-Android-App-/blob/master/app/src/main/res/calcy2.png" width="500" height="300" alt = "ScreenShot_2">
